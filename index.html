@@ -1,52 +1,159 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Card corrinnj</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-  <div class="container">
-    <div class="main">
-      <div class="icon">
-        <img id="profile-icon" src="https://raw.githubusercontent.com/toxicneka/pictures/main/ava.jpg" class="profile-icon" alt="profile">
-      </div>
-      <div class="info">
-        <span class="title">Corrinne Jonathan</span>
-        <span class="login">@corrinnj</span>
-        
-        <div class="media-buttons">
-          <a href="https://www.instagram.com/toxnela/" class="link"><i class='bx bxl-instagram'></i></a>
-          <a href="https://https://t.me/toxnela/" class="link"><i class='bx bxl-telegram'></i></a>
-          <a href="https://https://vk.com/toxnela/" class="link"><i class='bx bxl-vk'></i></a>
-        </div>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("hearts.gif");
+  }
 
-        <span class="description">
-          i love cats, playing overwatch and<br>
-          i'm kinda tired person
-        </span>
+  .main {
+    width: 480px;
+    height: 600px;
+    border-radius: 50px;
+    background: #B2333D;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+  }
 
-        <div class="buttons">
-          <button class="button" id="follow-btn">Follow</button>
-          <button class="button" id="message-btn">Message</button>
-        </div>
-        <div class="analytics">
-          <div class="data" id="click">
-            <span class="number-follow">0</span>
-            <i class='bx bx-heart'></i>
-          </div>
-          <div class="data">
-            <span class="number-msg">0</span>
-            <i class='bx bx-message-rounded'></i>
-          </div>
-        </div>
-              <div class="vector"></div>
-      </div>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+  .icon {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .profile-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .profile-icon:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .info {
+    position: absolute;
+    top: 260px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .login {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #666;
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  .media-buttons {
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  .link:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  .media-buttons a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+  .media-buttons a:visited {
+    color: #666;
+  }
+
+
+  .link {
+    text-decoration: none;
+    font-size: 24px;
+  }
+
+  .description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    color: #333;
+    display: block;
+    margin: 0 40px 40px;
+    line-height: 1.2;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    padding: 16px 32px;
+    border-radius: 50px;
+    border: 1px solid #B2333D;
+    color: #B2333D;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+    flex: 0.2;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Начальная тень */
+    transition: box-shadow 0.3s ease-in-out; /* Плавное появление тени */
+  }
+
+  .button:hover {
+    background: #B2333D;
+    color: white;
+  }
+
+  .button:active {
+    box-shadow: inset 0 10px 15px rgba(0, 0, 0, 0.25); /* Внутренняя тень при нажатии */
+  }
+
+  .analytics {
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+    font-weight: 200;
+    font-size: 12px;
+    margin-top: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #B2333D;
+    padding: 0 28px;
+    gap: 136px;
+  }
+
+  .vector {
+    position: absolute;
+    top: -40px;
+    height: 150%;
+    width: 100%;
+    background: white;
+    mask-image: url("https://raw.githubusercontent.com/toxicneka/pictures/refs/heads/main/white_liquid.png");
+    mask-repeat: repeat-x;
+    animation: vector 70s linear infinite;
+    z-index: -1;
+  }
+
+  @keyframes vector {
+    from { mask-position: 0 0; }
+    to { mask-position: -7000px 0; }
+}
