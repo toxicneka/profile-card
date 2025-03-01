@@ -12,7 +12,7 @@
   <div class="container">
     <div class="main">
       <div class="icon">
-        <img src="https://raw.githubusercontent.com/toxicneka/pictures/main/ava.jpg" class="profile-icon" alt="profile">
+        <img id="profile-icon" src="https://raw.githubusercontent.com/toxicneka/pictures/main/ava.jpg" class="profile-icon" alt="profile">
       </div>
       <div class="info">
         <span class="title">Corrinne Jonathan</span>
@@ -30,12 +30,23 @@
         </span>
 
         <div class="buttons">
-          <button class="button">Follow</button>
-          <button class="button">Message</button>
+          <button class="button" id="follow-btn">Follow</button>
+          <button class="button" id="message-btn">Message</button>
+        </div>
+        <div class="analytics">
+          <div class="data" id="click">
+            <span class="number-follow">0</span>
+            <i class='bx bx-heart'></i>
+          </div>
+          <div class="data">
+            <span class="number-msg">0</span>
+            <i class='bx bx-message-rounded'></i>
+          </div>
         </div>
               <div class="vector"></div>
       </div>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
