@@ -112,7 +112,6 @@
     color: #B2333D;
     background: white;
     cursor: pointer;
-    transition: 0.3s;
     flex: 0.2;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Начальная тень */
     transition: box-shadow 0.3s ease-in-out; /* Плавное появление тени */
