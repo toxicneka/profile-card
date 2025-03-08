@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-image: url("https://raw.githubusercontent.com/toxicneka/pictures/main/ava.jpg");
   background-repeat: no-repeat; /* Чтобы изображение не повторялось */
   background-size: cover;
 }
